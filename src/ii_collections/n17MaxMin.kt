@@ -7,10 +7,10 @@ fun example4() {
 
 fun Shop.getCustomerWithMaximumNumberOfOrders(): Customer? {
     // Return a customer whose order count is the highest among all customers
-    return this.customers.maxBy { it.orders.size }
+    return customers.maxBy { it.orders.size }
 }
 
 fun Customer.getMostExpensiveOrderedProduct(): Product? {
     // Return the most expensive product which has been ordered
-    return this.orders.flatMap { it.products }.maxBy { it.price }
+    return orders.flatMap { it.products }.maxBy { it.price }
 }
